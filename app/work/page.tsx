@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import { Project } from "@/types/project";
 import { ProjectCard } from "@/components/ProjectCard";
+
+export const metadata: Metadata = {
+  title: "Work",
+  description: "A showcase of selected projects.",
+};
 
 const projects: Project[] = [
   {

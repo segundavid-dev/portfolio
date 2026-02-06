@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { ContactLink } from "@/types/contact";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch.",
+};
 
 const contactLinks: ContactLink[] = [
   { label: "Email", href: "mailto:segdavid03@gmail.com" },
