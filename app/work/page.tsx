@@ -44,7 +44,7 @@ const projects: Project[] = [
 
 export default function WorkPage() {
   return (
-    <main className="min-h-screen px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
+    <div className="px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 italic">
           Selected Work
@@ -59,6 +59,6 @@ export default function WorkPage() {
           <ProjectCard key={project.title} {...project} />
         ))}
       </div>
-    </main>
+    </div>
   );
 }

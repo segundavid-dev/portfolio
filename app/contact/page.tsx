@@ -15,7 +15,7 @@ const contactLinks: ContactLink[] = [
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
+    <div className="px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 italic">
           Get in Touch
@@ -38,6 +38,6 @@ export default function ContactPage() {
           </Link>
         ))}
       </div>
-    </main>
+    </div>
   );
 }

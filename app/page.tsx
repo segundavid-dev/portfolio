@@ -4,7 +4,7 @@ import Highlight from "@/components/HighLight";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
+    <div className="px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
       {/* Hero / Name */}
       <section className="mb-24">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic">
@@ -33,6 +33,6 @@ export default function Home() {
           When I'm not writing code, I'm probably enjoying a book or watching anime 😎.
         </p>
       </NarrativeSection>
-    </main>
+    </div>
   );
 }
