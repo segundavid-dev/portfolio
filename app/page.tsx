@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { NarrativeSection } from "@/components/NarrativeSection";
 import Highlight from "@/components/HighLight";
 
@@ -23,7 +24,7 @@ export default function Home() {
           Most of my time is spent working on the <Highlight>Typescript/Javascript</Highlight> ecosystem. I like exploring problems from different angles and collaborating with people to work on cool projects.
         </p>
         <p className="narrative-text">
-          I'm a member of the <Highlight>Cowrywise Frontend Engineering (skill based) </Highlight> team, where I collaborate, learn, and build alongside other engineers who care deeply about quality and growth. I also enjoy collaboration through <Highlight>open source</Highlight> and shared learning.
+          I'm a member of the <Highlight>Cowrywise Frontend Engineering (skill-based) </Highlight> team and a contributor to <Highlight><Link href="https://arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">Arioron</Link></Highlight>, an open-collaboration AI software company building tools like <Highlight><Link href="https://vexai.arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">VexAI</Link></Highlight> and <Highlight><Link href="https://search.arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">Inquire</Link></Highlight>. I stay actively involved in <Highlight>open source</Highlight> and shared learning.
         </p>
         <p className="narrative-text">
           Lately, I've been digging deeper into <Highlight>backend systems</Highlight>: databases, cloud infrastructure, and the patterns that make systems scalable and reliable in the best way possible. I love connecting theory to practice, especially through books, articles and youtube videos.
