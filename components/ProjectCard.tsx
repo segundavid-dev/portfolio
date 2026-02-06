@@ -11,6 +11,12 @@ interface ProjectCardProps {
   wip?: boolean;
 }
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export const ProjectCard = ({ title, description, tags, liveLink, githubLink, wip }: ProjectCardProps) => {
   return (
     <motion.div
@@ -49,26 +55,38 @@ export const ProjectCard = ({ title, description, tags, liveLink, githubLink, wi
 
         <div className="flex items-center gap-5 text-zinc-300 dark:text-zinc-700">
           {githubLink && (
-            <a 
-              href={githubLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-              title="View Source"
-            >
-              <Github className="w-6 h-6 stroke-[1.5px]" />
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a 
+                  href={githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  <Github className="w-6 h-6 stroke-[1.5px]" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>View Source</p>
+              </TooltipContent>
+            </Tooltip>
           )}
           {liveLink && (
-            <a 
-              href={liveLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-              title="View Site"
-            >
-              <Globe className="w-6 h-6 stroke-[1.5px]" />
-            </a>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a 
+                  href={liveLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  <Globe className="w-6 h-6 stroke-[1.5px]" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>View Site</p>
+              </TooltipContent>
+            </Tooltip>
           )}
         </div>
       </div>
