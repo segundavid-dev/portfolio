@@ -8,7 +8,9 @@ import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const navItems = [
+import { NavItem } from "@/types/nav";
+
+const navItems: NavItem[] = [
   { name: "home", path: "/" },
   { name: "work", path: "/work" },
   { name: "contact", path: "/contact" },

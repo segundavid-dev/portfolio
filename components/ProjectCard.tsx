@@ -2,14 +2,9 @@
 import { motion } from "framer-motion";
 import { Github, Globe } from "lucide-react";
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tags: string[];
-  liveLink?: string;
-  githubLink?: string;
-  wip?: boolean;
-}
+import { Project } from "@/types/project";
+
+interface ProjectCardProps extends Project {}
 
 import {
   Tooltip,

@@ -1,6 +1,7 @@
+import { Project } from "@/types/project";
 import { ProjectCard } from "@/components/ProjectCard";
 
-const projects = [
+const projects: Project[] = [
   {
     title: "SegzWorks",
     description: "A high-end design agency portfolio showcasing interactive visual storytelling, creativity, and seamless frontend animations.",

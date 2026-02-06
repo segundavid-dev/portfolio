@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { ContactLink } from "@/types/contact";
+
+const contactLinks: ContactLink[] = [
+  { label: "Email", href: "mailto:segdavid03@gmail.com" },
+  { label: "GitHub", href: "https://github.com/segundavid-dev", external: true },
+  { label: "Twitter", href: "https://twitter.com/david__segun", external: true },
+];
 
 export default function ContactPage() {
   return (
@@ -13,28 +20,17 @@ export default function ContactPage() {
       </section>
 
       <div className="flex flex-col gap-6">
-        <Link 
-          href="mailto:segdavid03@gmail.com" 
-          className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500"
-        >
-          Email
-        </Link>
-        <Link 
-          href="https://github.com/segundavid-dev" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500"
-        >
-          GitHub
-        </Link>
-        <Link 
-          href="https://twitter.com/david__segun" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500"
-        >
-          Twitter
-        </Link>
+        {contactLinks.map((link) => (
+          <Link 
+            key={link.label}
+            href={link.href} 
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener noreferrer" : undefined}
+            className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500 w-fit"
+          >
+            {link.label}
+          </Link>
+        ))}
       </div>
     </main>
   );
