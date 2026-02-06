@@ -10,15 +10,15 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic">
           David Segun
         </h1>
-        <p className="text-xl text-zinc-600 dark:text-zinc-400 font-medium tracking-tight">
+        <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 font-medium tracking-tight">
           Software Engineer
         </p>
       </section>
 
       {/* Narrative Section */}
       <NarrativeSection>
-        <p className="narrative-text text-xl">
-          Hii, I'm David, also known as DOS and I really enjoy building things, especially when they help me understand how systems work beneath the surface.
+        <p className="narrative-text text-lg md:text-xl">
+          Hii, I&apos;m David, also known as DOS and I really enjoy building things, especially when they help me understand how systems work beneath the surface.
         </p>
         <p className="narrative-text">
           Most of my time is spent working on the <Highlight>Typescript/Javascript</Highlight> ecosystem. I like exploring problems from different angles and collaborating with people to work on cool projects.

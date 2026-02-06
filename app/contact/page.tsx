@@ -11,13 +11,13 @@ export default function ContactPage() {
       </section>
 
       <div className="flex flex-col gap-6">
-        <a href="mailto:hello@example.com" className="text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
+        <a href="mailto:hello@example.com" className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
           Email
         </a>
-        <a href="https://github.com" className="text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
+        <a href="https://github.com" className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
           GitHub
         </a>
-        <a href="https://twitter.com" className="text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
+        <a href="https://twitter.com" className="text-xl md:text-2xl font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-300 dark:decoration-zinc-700 underline-offset-8 transition-colors hover:text-zinc-500">
           Twitter
         </a>
       </div>
