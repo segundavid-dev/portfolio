@@ -16,7 +16,7 @@ const projects: Project[] = [
     liveLink: "http://segzworks.studio/",
   },
   {
-    title: "Valentxt",
+    title: "Valentext",
     description:
       "A playful Valentine note creator that lets users craft, share, and revisit personalized messages with a clean, interactive UI.",
     tags: ["React", "TailwindCSS", "MongoDB", "ExpressJS", "Typescript"],
