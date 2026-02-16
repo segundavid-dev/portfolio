@@ -1,0 +1,27 @@
+# llms.txt
+
+## Summary
+I am a software engineer specializing in frontend engineering with solid backend experience. I build interactive, high-performance web experiences for businesses, focusing on clear UX, accessible UI, and measurable outcomes. I collaborate with distributed teams, ship production-ready features, and take products from idea to launch.
+
+## Services
+- Frontend engineering (React, Next.js, TypeScript)
+- Design-to-code implementation with attention to accessibility and performance
+- UI architecture, component systems, and design systems
+- Product engineering: rapid prototyping, MVPs, and iterative shipping
+- Backend integration: APIs, auth, data modeling, and deployment support
+
+## Expertise
+- Interactive user experiences, animations, and micro-interactions
+- SEO-friendly, fast-loading web apps
+- Cross-functional collaboration with design, product, and engineering
+- Remote-first workflows and async communication
+
+## Interests
+- Open source, startups, and SaaS products
+- Building and shipping side projects
+
+## Audience
+Founders, startups, and businesses that need a reliable frontend partner to build or improve web products.
+
+## Contact
+Use the contact form on this site or reach out via the links in the header/footer.
