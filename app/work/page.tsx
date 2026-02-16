@@ -10,32 +10,50 @@ export const metadata: Metadata = {
 const projects: Project[] = [
   {
     title: "SegzWorks",
-    description: "A high-end design agency portfolio showcasing interactive visual storytelling, creativity, and seamless frontend animations.",
+    description:
+      "A high-end design agency portfolio showcasing interactive visual storytelling, creativity, and seamless frontend animations.",
     tags: ["Animation", "Frontend", "Design"],
     liveLink: "http://segzworks.studio/",
   },
   {
+    title: "Valentxt",
+    description:
+      "A playful Valentine note creator that lets users craft, share, and revisit personalized messages with a clean, interactive UI.",
+    tags: ["React", "TailwindCSS", "MongoDB", "ExpressJS", "Typescript"],
+    liveLink: "https://valentext.pxxl.click/",
+    githubLink: "https://github.com/segundavid-dev/valentine-frontend",
+  },
+  {
     title: "Ad-Shield",
-    description: "An effiecient Chrome extension built to eliminate intrusive ads and popups, ensuring a faster and cleaner browsing experience.",
+    description:
+      "An effiecient Chrome extension built to eliminate intrusive ads and popups, ensuring a faster and cleaner browsing experience.",
     tags: ["chrome extension", "wxt-react", "declarativenetrequest-api"],
     liveLink: "https://ad-shield-web.vercel.app/",
     githubLink: "https://github.com/segundavid-dev/ad-shield",
   },
   {
     title: "Qrvest",
-    description: "A AI-powered fullstack QR ordering system for restaurants and hotels.",
+    description:
+      "A AI-powered fullstack QR ordering system for restaurants and hotels.",
     tags: ["Typescript", "fullstack", "RAG"],
-    liveLink: "https://app.qrvest.com/"
+    liveLink: "https://app.qrvest.com/",
   },
   {
     title: "JSON Parser",
-    description: "A lightweight, recursive-descent JSON parser implemented from scratch, focused on the fundamentals of lexical and syntactic analysis.",
-    tags: ["algorithms", "syntatic analysis", "lexical analysis", "interpreters"],
+    description:
+      "A lightweight, recursive-descent JSON parser implemented from scratch, focused on the fundamentals of lexical and syntactic analysis.",
+    tags: [
+      "algorithms",
+      "syntatic analysis",
+      "lexical analysis",
+      "interpreters",
+    ],
     githubLink: "https://github.com/Segundavid-Dev/JSON-parser",
   },
   {
     title: "Scheduling Automation",
-    description: "A robust backend engine designed to handle complex scheduling logic —inspired by tools like Calendly.",
+    description:
+      "A robust backend engine designed to handle complex scheduling logic —inspired by tools like Calendly.",
     tags: ["backend", "typescript", "automation", "api design"],
     githubLink: "https://github.com/segundavid-dev/scheduling-automation-be",
     wip: true,
@@ -50,7 +68,8 @@ export default function WorkPage() {
           Selected Work
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
-          A collection of systems, tools, and experiments I've built while exploring the intersection of design and engineering.
+          A collection of systems, tools, and experiments I've built while
+          exploring the intersection of design and engineering.
         </p>
       </section>
 
