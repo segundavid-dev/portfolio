@@ -12,6 +12,7 @@ import { NavItem } from "@/types/nav";
 
 const navItems: NavItem[] = [
   { name: "home", path: "/" },
+  { name: "about", path: "/about" },
   { name: "work", path: "/work" },
   { name: "contact", path: "/contact" },
 ];

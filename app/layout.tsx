@@ -3,7 +3,6 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 
-
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
@@ -12,18 +11,24 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://davidsegun.com"),
   title: {
-    default: "David Segun | Software Engineer",
+    default: "David Segun",
     template: "%s | David Segun",
   },
   description: "Computer Scientist and Software Engineer",
   icons: {
     icon: "/icon.jpeg",
   },
-  keywords: ["Software Engineer", "Frontend Developer", "Backend Developer", "David Segun", "DOS"],
+  keywords: [
+    "Software Engineer",
+    "Frontend Developer",
+    "Backend Developer",
+    "David Segun",
+    "DOS",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    // url: "https://davidsegun.com", 
+    // url: "https://davidsegun.com",
     siteName: "David Segun Portfolio",
     title: "David Segun | Software Engineer",
     description: "Building scalable systems and interactive experiences.",
@@ -56,9 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${spaceGrotesk.className} antialiased`}
-      >
+      <body className={`${spaceGrotesk.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -68,9 +71,7 @@ export default function RootLayout({
           <TooltipProvider>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-1">
-                {children}
-              </main>
+              <main className="flex-1">{children}</main>
               <Footer />
             </div>
           </TooltipProvider>

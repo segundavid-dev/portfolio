@@ -1,38 +1,59 @@
-import Link from "next/link";
 import { NarrativeSection } from "@/components/NarrativeSection";
-import Highlight from "@/components/HighLight";
+import { OrgLink } from "@/components/OrgLink";
+import { MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
-      {/* Hero / Name */}
-      <section className="mb-24">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 italic">
-          David Segun
-        </h1>
-        <p className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 font-medium tracking-tight">
-          Software Engineer
-        </p>
-      </section>
+    <div className="h-screen flex flex-col px-6 md:px-12 max-w-2xl mx-auto">
+      <div className="flex-1 flex flex-col justify-center">
+        <section className="mb-10">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-2 italic">
+            David Segun
+          </h1>
+          <p className="text-base text-zinc-900 dark:text-zinc-100">
+            Software Engineer
+          </p>
+        </section>
 
-      {/* Narrative Section */}
-      <NarrativeSection>
-        <p className="narrative-text text-lg md:text-xl">
-          Hii, I&apos;m David, also known as DOS and I really enjoy building things, especially when they help me understand how systems work beneath the surface.
+        <NarrativeSection>
+          <p className="narrative-text">
+            Hii, I&apos;m David and I like building things.
+          </p>
+          <p className="narrative-text">
+            Currently part of{" "}
+            <OrgLink href="https://fastcrest.com">Fastcrest</OrgLink>, an open
+            source org. We&apos;re shipping{" "}
+            <a
+              href="http://github.com/fastCrest/reflex-vla"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2"
+            >
+              reflex-vla
+            </a>
+            , a tool that lets you deploy trained VLA models to edge GPUs with a
+            single command. I am also core team @{" "}
+            <OrgLink href="https://paza.social">Paza</OrgLink>, a platform that
+            makes brand-creator collaborations easier, from finding the right
+            match to managing campaigns and payments.
+          </p>
+        </NarrativeSection>
+      </div>
+
+      <div className="pb-8 space-y-3">
+        <p className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+          fun fact
         </p>
-        <p className="narrative-text">
-          Most of my time is spent working on the <Highlight>Typescript/Javascript</Highlight> ecosystem. I like exploring problems from different angles and collaborating with people to work on cool projects.
-        </p>
-        <p className="narrative-text">
-          I'm a member of the <Highlight>Cowrywise Frontend Engineering (skill-based) </Highlight> team and a contributor to <Highlight><Link href="https://arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">Arioron</Link></Highlight>, an open-collaboration AI software company building tools like <Highlight><Link href="https://vexai.arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">VexAI</Link></Highlight> and <Highlight><Link href="https://search.arioron.com/" target="_blank" className="underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700">Inquire</Link></Highlight>. I stay actively involved in <Highlight>open source</Highlight> and shared learning.
-        </p>
-        <p className="narrative-text">
-          Lately, I've been digging deeper into <Highlight>backend systems</Highlight>: databases, cloud infrastructure, and the patterns that make systems scalable and reliable in the best way possible. I love connecting theory to practice, especially through books, articles and youtube videos.
-        </p>
-        <p className="narrative-text">
-          When I'm not writing code, I'm probably enjoying a book or watching anime 😎.
-        </p>
-      </NarrativeSection>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2 text-sm text-zinc-900 dark:text-zinc-100">
+            <MessageCircle className="w-4 h-4 shrink-0" />
+            <span>
+              love nerding out in Discord servers with founders, researches,
+              senior devs and the open source community
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

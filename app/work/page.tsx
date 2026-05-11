@@ -68,7 +68,7 @@ export default function WorkPage() {
           Selected Work
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
-          A collection of systems, tools, and experiments I've built while
+          A collection of systems, tools, and experiments I have built while
           exploring the intersection of design and engineering.
         </p>
       </section>

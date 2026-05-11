@@ -1,7 +1,0 @@
-export default function Highlight({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="font-semibold text-black dark:text-white">
-      {children}
-    </span>
-  );
-}

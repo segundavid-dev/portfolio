@@ -53,7 +53,7 @@ body {
 }
 
 .narrative-text {
-  @apply text-[1.1rem] leading-[1.8] tracking-tight text-zinc-600 dark:text-stone-400;
+  @apply text-[1.1rem] leading-[1.8] tracking-tight text-zinc-900 dark:text-zinc-100;
 }
 
 .narrative-title {
