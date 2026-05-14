@@ -35,7 +35,7 @@ export const ProjectCard = ({
         <div className="space-y-3">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-baseline gap-3 flex-wrap">
-              <h3 className="text-xl font-bold tracking-tight italic text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                 {title}
               </h3>
               {wip && (

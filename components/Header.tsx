@@ -47,7 +47,7 @@ export const Header = () => {
             height={48} 
             className="dark:invert w-10 h-10 md:w-12 md:h-12"
           />
-          <span className="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-100 italic transition-transform group-hover:scale-105 inline-block">
+          <span className="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-100 transition-transform group-hover:scale-105 inline-block">
             DOS
           </span>
         </Link>
@@ -126,9 +126,9 @@ export const Header = () => {
                   <Link
                     href={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-4xl font-black tracking-tighter uppercase transition-all hover:italic hover:scale-105 inline-block ${
+                    className={`text-4xl font-black tracking-tighter uppercase transition-all hover:scale-105 inline-block ${
                       pathname === item.path
-                        ? "text-zinc-900 dark:text-zinc-100 italic underline underline-offset-8 decoration-4"
+                        ? "text-zinc-900 dark:text-zinc-100 underline underline-offset-8 decoration-4"
                         : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
                     }`}
                   >

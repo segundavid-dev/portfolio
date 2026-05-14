@@ -7,7 +7,7 @@ export default function Home() {
     <div className="h-screen flex flex-col px-6 md:px-12 max-w-2xl mx-auto">
       <div className="flex-1 flex flex-col justify-center">
         <section className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-2 italic">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">
             David Segun
           </h1>
           <p className="text-base text-zinc-900 dark:text-zinc-100">

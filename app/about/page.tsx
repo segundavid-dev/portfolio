@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <div className="px-6 md:px-12 max-w-2xl mx-auto py-32 md:py-40">
       <section className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8 italic">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8">
           About
         </h1>
 

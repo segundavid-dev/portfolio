@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <div className="px-6 py-32 md:px-12 md:py-48 max-w-4xl mx-auto">
       <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 italic">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
           Get in Touch
         </h1>
         <p className="text-lg text-zinc-600 dark:text-zinc-400">

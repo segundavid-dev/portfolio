@@ -8,17 +8,40 @@ export const metadata: Metadata = {
 };
 
 const projects: Project[] = [
-  {
+  /* {
     title: "SegzWorks",
     description:
       "A high-end design agency portfolio showcasing interactive visual storytelling, creativity, and seamless frontend animations.",
     tags: ["Animation", "Frontend", "Design"],
     liveLink: "http://segzworks.studio/",
+  }, */
+  {
+    title: "Paza",
+    description:
+      "Fullstack creator-brand collaboration platform that connects people based on shared values and identity.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Resend", "Paystack"],
+    liveLink: "https://paza.social",
+    githubLink: "https://github.com/job-kiptoo-dev/paza-social-frontend",
+  },
+  {
+    title: "Trading Daily",
+    description:
+      "Pre-market briefing system that scrapes market data, analyzes it with GPT-4o, and emails traders daily reports.",
+    tags: ["TypeScript", "NodeJs", "Azure", "Playwright"],
+    liveLink: "https://polite-pond-0a06a4e0f.1.azurestaticapps.net/",
+    githubLink: "https://github.com/gshock/trading-news",
+  },
+  {
+    title: "Qrvest",
+    description:
+      "QR-based ordering system for restaurants and hotels, powered by RAG.",
+    tags: ["Typescript", "React", "Websockets", "RAG"],
+    liveLink: "https://app.qrvest.com/",
   },
   {
     title: "Valentext",
     description:
-      "A playful Valentine note creator that lets users craft, share, and revisit personalized messages with a clean, interactive UI.",
+      "Valentine note creator that lets users craft and share personalized messages.",
     tags: ["React", "TailwindCSS", "MongoDB", "ExpressJS", "Typescript"],
     liveLink: "https://valentext.pxxl.click/",
     githubLink: "https://github.com/segundavid-dev/valentine-frontend",
@@ -26,32 +49,24 @@ const projects: Project[] = [
   {
     title: "Ad-Shield",
     description:
-      "An efficient Chrome extension built to eliminate intrusive ads and popups, ensuring a faster and cleaner browsing experience.",
+      "Chrome extension that blocks intrusive ads and popups using the DeclarativeNetRequest API.",
     tags: ["Chrome Extension", "WXT React", "DeclarativeNetRequest API"],
     liveLink: "https://ad-shield-web.vercel.app/",
     githubLink: "https://github.com/segundavid-dev/ad-shield",
   },
   {
-    title: "Qrvest",
+    title: "Skill Match",
     description:
-      "An AI-powered fullstack QR ordering system for restaurants and hotels.",
-    tags: ["Typescript", "Fullstack", "RAG"],
-    liveLink: "https://app.qrvest.com/",
+      "Tinder for volunteering wrapped with Capacitor for native Android app distribution.",
+    tags: ["React", "Prisma", "PostgreSQL", "TypeScript", "Capacitor"],
+    liveLink: "https://skill-match-weld.vercel.app/",
+    githubLink: "https://github.com/segundavid-dev/skill-match",
   },
   {
     title: "JSON Parser",
-    description:
-      "A lightweight, recursive-descent JSON parser implemented from scratch, focused on the fundamentals of lexical and syntactic analysis.",
-    tags: ["Algorithms", "Syntactic Analysis", "Lexical Analysis"],
+    description: "Recursive-descent JSON parser implemented from scratch.",
+    tags: ["Algorithms", "Syntactic Analysis", "Lexical Analysis", "TypeScript"],
     githubLink: "https://github.com/Segundavid-Dev/JSON-parser",
-  },
-  {
-    title: "Scheduling Automation",
-    description:
-      "A robust backend engine designed to handle complex scheduling logic — inspired by tools like Calendly.",
-    tags: ["Backend", "Typescript", "Automation", "API Design"],
-    githubLink: "https://github.com/segundavid-dev/scheduling-automation-be",
-    wip: true,
   },
 ];
 
@@ -62,11 +77,11 @@ export default function WorkPage() {
         <p className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
           Selected Work
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-5 italic">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-5">
           Things I&apos;ve built
         </h1>
         <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed max-w-lg">
-          A mix of systems, tools, and experiments — ranging from production
+          A mix of systems, tools, and experiments ranging from production
           products to side projects I built to learn something.
         </p>
       </section>
