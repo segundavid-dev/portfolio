@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { motion, MotionConfig } from "framer-motion";
+import { PredictiveArcCanvas } from "@designcodeio/threeui/components/PredictiveArcCanvas";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -45,6 +46,14 @@ export default function Home() {
   return (
     <MotionConfig reducedMotion="user">
       <div className="relative isolate min-h-svh">
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+          <PredictiveArcCanvas
+            variant="signal-particles"
+            mode="light"
+            brightness={1.06}
+            saturation={0.4}
+          />
+        </div>
         <section className="relative flex min-h-svh items-center overflow-hidden">
           <div className="mx-auto flex w-full max-w-3xl flex-col justify-center px-6 pt-28 pb-32 md:px-8">
           <Rise

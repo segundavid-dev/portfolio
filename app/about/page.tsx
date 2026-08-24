@@ -26,13 +26,13 @@ export default function AboutPage() {
 
         <div className="space-y-5">
           <p className="narrative-text">
-            I&apos;m David Segun — a software engineer based in Lagos, Nigeria,
-            also known as DOS. I spend my time turning ideas into products:
-            how they&apos;re built, and how they feel to use.
+            I&apos;m David Segun, a software engineer based in Lagos, Nigeria,
+            also known as DOS. I spend my time studying and turning ideas into products:
+            how they&apos;re built, and how they feel to use for users.
           </p>
           <p className="narrative-text">
-            Technology interests me less than the result it delivers. I like
-            getting in early — where decisions still shape what ships.
+            Technology interests me from frontend, system designs and building scalable solutions. I like
+            getting in early and solving hard interesting prolems
           </p>
         </div>
       </section>
@@ -44,34 +44,31 @@ export default function AboutPage() {
 
         <div className="space-y-5">
           <p className="narrative-text">
-            I contract at <A href="https://parsewave.ai/">Parsewave</A>,
+            I contribute @ <A href="https://parsewave.ai/">Parsewave</A>,
             building benchmarks and evaluations for frontier AI models —
-            terminal-bench, GDPval, and multimodal evaluation. The outcome:
-            teams get a clear answer to what their models can actually do
-            before they ship.
+            terminal-bench, GDPval, and multimodal evaluation.
           </p>
           <p className="narrative-text">
             I also run <A href="https://segzworks.studio">SegzWorks</A>, a
             design studio started with a creative designer. It&apos;s where
-            engineering meets design — taking rough ideas and shipping
+            engineering meets design, taking rough ideas and shipping
             interfaces that feel right.
           </p>
         </div>
       </section>
 
-      <section className="mb-16 fade-up fade-up-delay-2">
+      {/*<section className="mb-16 fade-up fade-up-delay-2">
         <p className="text-xs uppercase tracking-widest text-zinc-400 mb-6">
           Background
         </p>
 
         <div className="space-y-5">
           <p className="narrative-text">
-            A computer science background gave me the foundation to understand
-            how software works beneath the surface — and it shows up in
-            everything I build.
+            A computer science background gives me the foundation to understand
+            how software works, learning and exploring system designs and 
           </p>
         </div>
-      </section>
+      </section>*/}
     </div>
   );
 }
