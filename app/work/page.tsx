@@ -74,13 +74,13 @@ export default function WorkPage() {
   return (
     <div className="px-6 py-32 md:px-12 md:py-48 max-w-2xl mx-auto">
       <section className="mb-16">
-        <p className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4">
+        <p className="text-xs uppercase tracking-widest text-zinc-400 mb-4">
           Selected Work
         </p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-5">
           Things I&apos;ve built
         </h1>
-        <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed max-w-lg">
+        <p className="text-sm text-stone-500 leading-relaxed max-w-lg">
           A mix of systems, tools, and experiments ranging from production
           products to side projects I built to learn something.
         </p>
