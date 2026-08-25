@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import "@designcodeio/threeui/style.css";
 import { Header } from "@/components/Header";
 
 const spaceGrotesk = Space_Grotesk({
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     default: "David Segun",
     template: "%s | David Segun",
   },
-  description: "Computer Scientist and Software Engineer",
+  description: "Software Engineer building products that ship — and hold up after they do.",
   icons: {
     icon: "/icon.jpeg",
   },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     // url: "https://davidsegun.com",
     siteName: "David Segun Portfolio",
     title: "David Segun | Software Engineer",
-    description: "Building scalable systems and interactive experiences.",
+    description: "Software Engineer building products that ship — and hold up after they do.",
     images: [
       {
         url: "/og-image.png", // You should create this image later
@@ -44,13 +45,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "David Segun | Software Engineer",
-    description: "Building scalable systems and interactive experiences.",
+    description: "Software Engineer building products that ship — and hold up after they do.",
     creator: "@david__segun",
     images: ["/og-image.png"],
   },
 };
 
-import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Footer } from "@/components/Footer";
 
@@ -60,22 +60,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${spaceGrotesk.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <TooltipProvider>
-            <div className="flex flex-col min-h-screen">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </TooltipProvider>
-        </ThemeProvider>
+        <TooltipProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </TooltipProvider>
       </body>
     </html>
   );

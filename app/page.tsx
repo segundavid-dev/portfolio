@@ -1,59 +1,114 @@
-import { NarrativeSection } from "@/components/NarrativeSection";
-import { OrgLink } from "@/components/OrgLink";
-import { MessageCircle } from "lucide-react";
+"use client";
+
+import type { ReactNode } from "react";
+import { motion, MotionConfig } from "framer-motion";
+import { PredictiveArcCanvas } from "@designcodeio/threeui/components/PredictiveArcCanvas";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+function MaskReveal({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
+  return (
+    <span className="block overflow-hidden">
+      <motion.span
+        className="block"
+        initial={{ y: "112%" }}
+        animate={{ y: "0%" }}
+        transition={{ duration: 0.9, ease: EASE, delay }}
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
+function Rise({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  return (
+    <motion.p
+      className={className}
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: EASE, delay }}
+    >
+      {children}
+    </motion.p>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col px-6 md:px-12 max-w-2xl mx-auto">
-      <div className="flex-1 flex flex-col justify-center">
-        <section className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">
-            David Segun
+    <MotionConfig reducedMotion="user">
+      <div className="relative isolate min-h-svh">
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+          <PredictiveArcCanvas
+            variant="signal-particles"
+            mode="light"
+            brightness={1.06}
+            saturation={0.4}
+          />
+        </div>
+        <section className="relative flex min-h-svh items-center overflow-hidden">
+          <div className="mx-auto flex w-full max-w-3xl flex-col justify-center px-6 pt-28 pb-32 md:px-8">
+          <Rise
+            delay={0.05}
+            className="mb-6 text-xs uppercase tracking-[0.25em] text-zinc-700"
+          >
+            Software Engineer &mdash; Lagos, Nigeria
+          </Rise>
+
+          <h1 className="mb-8 text-[clamp(2.75rem,9vw,6.75rem)] leading-[0.95] font-bold tracking-tighter whitespace-nowrap">
+            <MaskReveal delay={0.18}>David Segun</MaskReveal>
           </h1>
-          <p className="text-base text-zinc-900 dark:text-zinc-100">
-            Software Engineer
-          </p>
+
+          <Rise
+            delay={0.42}
+            className="narrative-text text-zinc-900"
+          >
+            I&apos;m a software engineer who enjoys building{" "}
+            <span className="shimmer-text font-medium">user-facing</span>{" "}
+            systems and engineering products.
+          </Rise>
+          <Rise
+            delay={0.54}
+            className="narrative-text mt-5 text-zinc-600"
+          >
+            I work across the stack, with most of my time spent on frontend systems
+            and AI integration.
+          </Rise>
+          <Rise
+            delay={0.66}
+            className="narrative-text mt-5 text-zinc-600"
+          >
+            In my free time, I participate in hackathons, contribute to open
+            source, and dive deep into things like system design.
+          </Rise>
+          </div>
         </section>
 
-        <NarrativeSection>
-          <p className="narrative-text">
-            Hii, I&apos;m David and I like building things.
-          </p>
-          <p className="narrative-text">
-            Currently part of{" "}
-            <OrgLink href="https://fastcrest.com">Fastcrest</OrgLink>, an open
-            source org. We&apos;re shipping{" "}
-            <a
-              href="http://github.com/fastCrest/reflex-vla"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2"
-            >
-              reflex-vla
-            </a>
-            , a tool that lets you deploy trained VLA models to edge GPUs with a
-            single command. I am also core team @{" "}
-            <OrgLink href="https://paza.social">Paza</OrgLink>, a platform that
-            makes brand-creator collaborations easier, from finding the right
-            match to managing campaigns and payments.
-          </p>
-        </NarrativeSection>
+        <motion.span
+          aria-hidden="true"
+          className="absolute bottom-8 left-1/2 z-10 h-12 w-px origin-top bg-stone-400"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: [0, 1, 1, 0],
+            scaleY: [0, 1, 1, 0],
+          }}
+          transition={{
+            duration: 2.4,
+            times: [0, 0.35, 0.7, 1],
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.6,
+          }}
+        />
       </div>
-
-      <div className="pb-8 space-y-3">
-        <p className="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-          fun fact
-        </p>
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 text-sm text-zinc-900 dark:text-zinc-100">
-            <MessageCircle className="w-4 h-4 shrink-0" />
-            <span>
-              love nerding out in Discord servers with founders, researches,
-              senior devs and the open source community
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </MotionConfig>
   );
 }

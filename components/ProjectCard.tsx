@@ -18,6 +18,7 @@ export const ProjectCard = ({
   index,
 }: ProjectCardProps) => {
   const padded = String(index).padStart(2, "0");
+  const href = liveLink ?? githubLink;
 
   return (
     <motion.div
@@ -25,61 +26,71 @@ export const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="group border-b border-zinc-100 dark:border-zinc-900 py-8 last:border-0"
+      className="group relative flex flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition-colors duration-300 hover:border-zinc-400"
     >
-      <div className="grid grid-cols-[2rem_1fr] gap-x-4">
-        <span className="text-xs text-zinc-400 dark:text-zinc-500 tabular-nums pt-1">
-          {padded}
-        </span>
+      <div className="mb-8 flex items-center justify-between">
+        <span className="text-xs tabular-nums text-zinc-300">{padded}</span>
 
-        <div className="space-y-3">
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex items-baseline gap-3 flex-wrap">
-              <h3 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                {title}
-              </h3>
-              {wip && (
-                <span className="text-[9px] font-black uppercase tracking-[0.15em] text-stone-400 dark:text-stone-500">
-                  WIP
-                </span>
-              )}
-            </div>
-
-            <div className="flex items-center gap-3 text-zinc-400 dark:text-zinc-600 shrink-0 pt-0.5">
-              {githubLink && (
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                  aria-label="View source"
-                >
-                  <Github className="w-4 h-4 stroke-[1.5px]" />
-                </a>
-              )}
-              {liveLink && (
-                <a
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                  aria-label="View live"
-                >
-                  <ArrowUpRight className="w-4 h-4 stroke-[1.5px]" />
-                </a>
-              )}
-            </div>
-          </div>
-
-          <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed">
-            {description}
-          </p>
-
-          <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
-            {tags.join(" · ")}
-          </p>
+        <div className="relative z-10 flex items-center gap-3 text-zinc-400">
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-zinc-900"
+              aria-label="View source"
+            >
+              <Github className="h-4 w-4 stroke-[1.5px]" />
+            </a>
+          )}
+          {liveLink && (
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:text-zinc-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              aria-label="View live"
+            >
+              <ArrowUpRight className="h-4 w-4 stroke-[1.5px]" />
+            </a>
+          )}
         </div>
       </div>
+
+      <h3 className="text-xl font-bold tracking-tight text-zinc-900">
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="after:absolute after:inset-0 after:rounded-2xl focus:outline-none"
+          >
+            {title}
+            {wip && (
+              <span className="ml-2 align-middle text-[9px] font-black uppercase tracking-[0.15em] text-stone-400">
+                WIP
+              </span>
+            )}
+          </a>
+        ) : (
+          <>
+            {title}
+            {wip && (
+              <span className="ml-2 align-middle text-[9px] font-black uppercase tracking-[0.15em] text-stone-400">
+                WIP
+              </span>
+            )}
+          </>
+        )}
+      </h3>
+
+      <p className="mt-2 text-sm leading-relaxed text-stone-500">
+        {description}
+      </p>
+
+      <p className="mt-auto pt-8 text-[10px] font-bold uppercase tracking-wider text-stone-400">
+        {tags.join(" · ")}
+      </p>
     </motion.div>
   );
 };
